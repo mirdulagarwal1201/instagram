@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320">
+        <g transform="translate(-640 -380)">
+            <path
+                d="M544,160v64h32v64H544v64H64V160H544m16-64H48A48,48,0,0,0,0,144V368a48,48,0,0,0,48,48H560a48,48,0,0,0,48-48V352h8a24,24,0,0,0,24-24V184a24,24,0,0,0-24-24h-8V144A48,48,0,0,0,560,96Z"
+                transform="translate(640 284)" />
+            <rect width="406" height="114" transform="translate(741 483)" id="current-power" />
+        </g>
+    </svg>
+
+    <script>
+        const currentPower = document.getElementById('current-power');
+        const powerWidth   = currentPower.getAttribute('width');
+        
+        const setPower = percent => {
+            currentPower.style.width = powerWidth / 100 * percent;
+        }
+
+        setPower(20);
+    </script>
+
+</body>
+
+</html>
